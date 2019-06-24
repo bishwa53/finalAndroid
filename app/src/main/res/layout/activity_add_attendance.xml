@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddAttendanceActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvTecDas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Teacher Dashboard"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTecDas"
+        android:layout_margin="20dp"
+        android:text="class"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvsub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvclass"
+        android:layout_margin="20dp"
+        android:text="subject"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spnClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTecDas"
+        android:layout_margin="20dp"
+        android:layout_toRightOf="@+id/tvclass"
+         />
+
+    <Spinner
+        android:id="@+id/spnsub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spnClass"
+        android:layout_margin="20dp"
+        android:layout_toRightOf="@+id/tvsub"
+        />
+
+
+    <ImageButton
+        android:id="@+id/DateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvsub"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/calendar" />
+
+    <EditText
+        android:id="@+id/DateEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/spnsub"
+        android:layout_toRightOf="@+id/DateImageButton"
+        android:background="#ffffff"
+        android:editable="false"
+        android:ems="10"/>
+
+
+    <Button
+        android:id="@+id/btnAddAttendance"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DateImageButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="76dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Add Attendance" />
+
+    <Button
+        android:id="@+id/btnViewAttendance"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAddAttendance"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Add Attendance" />
+
+
+
+
+
+</RelativeLayout>
