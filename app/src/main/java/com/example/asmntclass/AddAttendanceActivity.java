@@ -106,6 +106,7 @@ public class AddAttendanceActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
 
+
             }
         });
 

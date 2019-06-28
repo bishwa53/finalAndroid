@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddAttendanceActivity"></activity>
+        <activity android:name=".AddStudentActivity"></activity>
+        <activity android:name=".ViewAttendanceActivity" />
+        <activity android:name=".AddAttendanceActivity" />
         <activity android:name=".ViewDetailOfTeacherActivity" />
         <activity android:name=".HolidayActivity" />
         <activity android:name=".EventActivity" />

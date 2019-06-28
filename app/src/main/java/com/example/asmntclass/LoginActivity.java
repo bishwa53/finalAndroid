@@ -1,6 +1,7 @@
 package com.example.asmntclass;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import model.Teacher;
 
 
 public class LoginActivity extends Activity  {
@@ -41,17 +44,18 @@ public class LoginActivity extends Activity  {
         tvCount.setVisibility(View.GONE);
 
         spinnerloginas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                     @Override
-                                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                                         ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
-                                                         userrole =(String) spinnerloginas.getSelectedItem();
-                                                     }
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
+                userrole =(String) spinnerloginas.getSelectedItem();
+            }
 
-                                                     @Override
-                                                     public void onNothingSelected(AdapterView<?> parent) {
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
-                                                     }
-                                                 });
+            }
+        });
+
         ArrayAdapter<String> adapter_role = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, userRoleString);
         adapter_role
@@ -106,23 +110,18 @@ public class LoginActivity extends Activity  {
                         etPassword.setError("enter password");
                     }
 
-                    Toast.makeText(LoginActivity.this, "I am here", Toast.LENGTH_SHORT).show();
-                }
-
-                tvCount.setVisibility(View.VISIBLE);
-                counter--;
-                tvCount.setText(Integer.toString(counter));
-
-                if (counter == 0) {
-                    btnLogin.setEnabled(false);
                 }
 
             }
         });
 
+        tvCount.setVisibility(View.VISIBLE);
+        counter--;
+        tvCount.setText(Integer.toString(counter));
 
-
-
+        if (counter == 0) {
+            btnLogin.setEnabled(false);
+        }
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -61,20 +61,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvsub"
         android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
         android:src="@drawable/calendar" />
 
     <EditText
         android:id="@+id/DateEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_below="@+id/spnsub"
-        android:layout_toRightOf="@+id/DateImageButton"
+       android:layout_below="@+id/DateImageButton"
+        android:layout_margin="20dp"
         android:background="#ffffff"
         android:editable="false"
         android:ems="10"/>
