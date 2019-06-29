@@ -7,7 +7,7 @@
 
 <android.support.v7.widget.CardView
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="wrap_content"
     app:cardCornerRadius="5dp"
     android:layout_margin="5dp"
     >
@@ -22,13 +22,42 @@
         android:id="@+id/tvFirstNameTeacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Teacher First Name"/>
+        android:text="Teacher First Name:"/>
     <TextView
         android:layout_margin="5dp"
         android:id="@+id/tvLastNameTeacher"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Teacher Last Name"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Last Name:"/>
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tvContactTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Contact:"/>
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tvAddressTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Address:"/>
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tvUsernameTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Username:"/>
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tvPasswordTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Password:"/>
+
 </LinearLayout>
 
 </android.support.v7.widget.CardView>

@@ -16,12 +16,45 @@
         android:id="@+id/tvFirstNameStudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Teacher First Name"/>
+        android:text="Student First Name:"/>
     <TextView
         android:id="@+id/tvLastNameStudent"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Teacher Last Name"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Last Name:"/>
+
+    <Spinner
+        android:id="@+id/spnClassStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></Spinner>
+
+    <TextView
+        android:id="@+id/tvContactStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Contact:"/>
+
+    <TextView
+        android:id="@+id/tvAddressStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Address:"/>
+
+    <TextView
+        android:id="@+id/tvUsernameStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student User Name:"/>
+
+    <TextView
+        android:id="@+id/tvPasswordStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Password:"/>
+
+
+
 </LinearLayout>
 
 </android.support.v7.widget.CardView>

@@ -42,6 +42,10 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
 //        setting values in recyclerView
         teacherHolder.tvFirstNameTeacher.setText(teacher.getTeacher_firstname());
         teacherHolder.tvLastNameTeacher.setText(teacher.getTeacher_lastname());
+        teacherHolder.tvContactTeacher.setText(teacher.getTeacher_contactnumber());
+        teacherHolder.tvAddressTeacher.setText(teacher.getTeacher_address());
+        teacherHolder.tvUsernameTeacher.setText(teacher.getTeacher_username());
+        teacherHolder.tvPasswordTeacher.setText(teacher.getTeacher_password());
     }
 
 
@@ -52,12 +56,16 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
 
     public class TeacherHolder extends RecyclerView.ViewHolder
     {
-        private TextView tvFirstNameTeacher,tvLastNameTeacher;
+        private TextView tvFirstNameTeacher,tvLastNameTeacher,tvContactTeacher,tvAddressTeacher,tvUsernameTeacher,tvPasswordTeacher;
 
         public TeacherHolder(View itemView) {
             super(itemView);
             tvFirstNameTeacher= itemView.findViewById(R.id.tvFirstNameTeacher);
             tvLastNameTeacher= (TextView) itemView.findViewById(R.id.tvLastNameTeacher);
+            tvContactTeacher= (TextView) itemView.findViewById(R.id.tvContactTeacher);
+            tvAddressTeacher= (TextView) itemView.findViewById(R.id.tvAddressTeacher);
+            tvUsernameTeacher= (TextView) itemView.findViewById(R.id.tvUsernameTeacher);
+            tvPasswordTeacher= (TextView) itemView.findViewById(R.id.tvPasswordTeacher);
             }
     }
 }
