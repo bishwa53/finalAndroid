@@ -27,9 +27,6 @@ public class ViewDetailOfTeacherActivity extends AppCompatActivity {
 
         recyclerViewListTeacher = findViewById(R.id.recyclerViewTeacher);
 
-
-        recyclerViewListTeacher = findViewById(R.id.recyclerViewTeacher);
-
         AttendanceAPI attendanceAPI = Url.getInstance().create(AttendanceAPI.class);
 
         Call<List<Teacher>> listCall = attendanceAPI.getTeacher();
