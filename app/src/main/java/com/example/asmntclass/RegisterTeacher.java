@@ -29,7 +29,7 @@ public class RegisterTeacher extends AppCompatActivity {
         etAddress = findViewById(R.id.etAddress);
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        btnRegisterTeacher = findViewById(R.id.btnRegisterStudent);
+        btnRegisterTeacher = findViewById(R.id.btnRegisterTeacher);
 
         btnRegisterTeacher.setOnClickListener(new View.OnClickListener() {
 

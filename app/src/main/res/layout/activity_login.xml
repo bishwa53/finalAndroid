@@ -7,6 +7,14 @@
     android:background="@drawable/download"
     android:paddingBottom = "20dp" tools:context = ".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
     <TextView
         android:id="@+id/textview"
         android:text = "Login Form "
@@ -111,5 +119,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/textview"
         android:layout_toEndOf="@+id/textview" />
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

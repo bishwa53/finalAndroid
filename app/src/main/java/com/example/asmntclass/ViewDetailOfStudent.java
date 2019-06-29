@@ -43,8 +43,8 @@ public class ViewDetailOfStudent extends AppCompatActivity {
                     Toast.makeText(ViewDetailOfStudent.this, "Code : "+ response.code() , Toast.LENGTH_SHORT).show();
                 }
                 List<student> items =  response.body();
-                StudentAdapter studetAdapter = new StudentAdapter(items,ViewDetailOfStudent.this);
-                recyclerViewListStudent.setAdapter(studetAdapter);
+                StudentAdapter studentAdapter = new StudentAdapter(items,ViewDetailOfStudent.this);
+                recyclerViewListStudent.setAdapter(studentAdapter);
                 recyclerViewListStudent.setLayoutManager(new LinearLayoutManager(ViewDetailOfStudent.this));
             }
             @Override

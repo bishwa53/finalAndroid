@@ -87,5 +87,16 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                Intent intent =new Intent(Dashboard.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
