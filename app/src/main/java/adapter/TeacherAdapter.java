@@ -40,12 +40,12 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
 
         final Teacher teacher= teacherList.get(i);
 //        setting values in recyclerView
-        teacherHolder.tvFirstNameTeacher.setText(teacher.getTeacher_firstname());
-        teacherHolder.tvLastNameTeacher.setText(teacher.getTeacher_lastname());
-        teacherHolder.tvContactTeacher.setText(teacher.getTeacher_contactnumber());
-        teacherHolder.tvAddressTeacher.setText(teacher.getTeacher_address());
-        teacherHolder.tvUsernameTeacher.setText(teacher.getTeacher_username());
-        teacherHolder.tvPasswordTeacher.setText(teacher.getTeacher_password());
+        teacherHolder.tvFirstNameTeacher.setText(teacher.getFirstName());
+        teacherHolder.tvLastNameTeacher.setText(teacher.getLastName());
+        teacherHolder.tvContactTeacher.setText(teacher.getContact());
+        teacherHolder.tvAddressTeacher.setText(teacher.getAddress());
+        teacherHolder.tvUsernameTeacher.setText(teacher.getUsername());
+        teacherHolder.tvPasswordTeacher.setText(teacher.getPassword());
     }
 
 

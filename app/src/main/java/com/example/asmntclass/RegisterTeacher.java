@@ -11,7 +11,12 @@ import android.widget.Toast;
 
 import java.time.Instant;
 
+import URL.Url;
+import api.AttendanceAPI;
 import model.Teacher;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RegisterTeacher extends AppCompatActivity {
 
@@ -44,6 +49,7 @@ public class RegisterTeacher extends AppCompatActivity {
                 String userName = etUsername.getText().toString();
                 String passWord = etPassword.getText().toString();
 
+
                 if (TextUtils.isEmpty(first_name)) {
                     etFname.setError("please enter firstname");
                 }
@@ -65,17 +71,33 @@ public class RegisterTeacher extends AppCompatActivity {
                 }
 
                 else {
-                    Teacher teacher = new Teacher();
-                    teacher.getTeacher_firstname();
-                    teacher.getTeacher_lastname();
-                    teacher.getTeacher_contactnumber();
-                    teacher.getTeacher_address();
-                    teacher.getTeacher_username();
-                    teacher.getTeacher_password();
 
-                    Intent intent =new Intent(RegisterTeacher.this,Dashboard.class);
-                    startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "Teacher added sucessfully", Toast.LENGTH_SHORT).show();
+                    Teacher teacher = new Teacher(first_name,last_name,phone_no, address,userName,passWord);
+
+                    AttendanceAPI attendanceAPI = Url.getInstance().create(AttendanceAPI.class);
+
+
+                    Call<Void> voidCall = attendanceAPI.addTeacher(teacher);
+                    voidCall.enqueue(new Callback<Void>() {
+                        @Override
+                        public void onResponse(Call<Void> call, Response<Void> response) {
+                            if (!response.isSuccessful()){
+                                Toast.makeText(RegisterTeacher.this, "Code" + response.code(), Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            Toast.makeText(RegisterTeacher.this, "Added", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onFailure(Call<Void> call, Throwable t) {
+
+                        }
+                    });
+
+
+
+
+
                 }
 
             }

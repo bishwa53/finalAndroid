@@ -98,13 +98,13 @@ public class RegisterActivity extends AppCompatActivity {
 
                     student student = new student();
 
-                    student.setStudent_firstname(first_name);
-                    student.setStudent_lastname(last_name);
-                    student.setStudent_contactnumber(phone_no);
-                    student.setStudent_address(address);
-                    student.setStudent_class(year);
-                    student.setStudent_username(userName);
-                    student.setStudent_password(passWord);
+                    student.setFirstName(first_name);
+                    student.setLastName(last_name);
+                    student.setContactNumber(phone_no);
+                    student.setAddress(address);
+                    student.cla(year);
+                    student.setUsername(userName);
+                    student.setPassword(passWord);
 
 
                     Intent intent =new Intent(RegisterActivity.this,Dashboard.class);

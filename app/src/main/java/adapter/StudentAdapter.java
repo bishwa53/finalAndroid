@@ -41,13 +41,13 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentH
         final student student= studentList.get(i);
 
 //        setting values in recyclerView
-        studentHolder.tvFirstNameStudent.setText(student.getStudent_firstname());
-        studentHolder.tvLastNameStudent.setText(student.getStudent_lastname());
-        studentHolder.spnClassStudent.setText(student.getStudent_class());
-        studentHolder.tvContactStudent.setText(student.getStudent_contactnumber());
-        studentHolder.tvAddressStudent.setText(student.getStudent_address());
-        studentHolder.tvUsernameStudent.setText(student.getStudent_username());
-        studentHolder.tvPasswordStudent.setText(student.getStudent_password());
+        studentHolder.tvFirstNameStudent.setText(student.getFirstName());
+        studentHolder.tvLastNameStudent.setText(student.getLastName());
+        studentHolder.spnClassStudent.setText(student.getClasses());
+        studentHolder.tvContactStudent.setText(student.getContactNumber());
+        studentHolder.tvAddressStudent.setText(student.getAddress());
+        studentHolder.tvUsernameStudent.setText(student.getUsername());
+        studentHolder.tvPasswordStudent.setText(student.getPassword());
 
     }
 
@@ -66,7 +66,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentH
             super(itemView);
             tvFirstNameStudent= itemView.findViewById(R.id.tvFirstNameStudent);
             tvLastNameStudent= (TextView) itemView.findViewById(R.id.tvLastNameStudent);
-            spnClassStudent = itemView.findViewById(R.id.spnClassStudent);
+            spnClassStudent = itemView.findViewById(R.id.spnClass);
             tvContactStudent = itemView.findViewById(R.id.tvContactStudent);
             tvAddressStudent = itemView.findViewById(R.id.tvAddressStudent);
             tvUsernameStudent = itemView.findViewById(R.id.tvUsernameStudent);

@@ -3,12 +3,21 @@ package model;
 public class Teacher {
 
     private int teacher_id;
-    private String teacher_firstname;
-    private String teacher_lastname;
-    private String teacher_contactnumber;
-    private String teacher_address;
-    private String teacher_username;
-    private String teacher_password;
+    private String firstName;
+    private String lastName;
+    private String contact;
+    private String address;
+    private String username;
+    private String password;
+
+    public Teacher(String firstName, String lastName, String contact, String address, String username, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contact = contact;
+        this.address = address;
+        this.username = username;
+        this.password = password;
+    }
 
     public int getTeacher_id() {
         return teacher_id;
@@ -18,51 +27,51 @@ public class Teacher {
         this.teacher_id = teacher_id;
     }
 
-    public String getTeacher_firstname() {
-        return teacher_firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setTeacher_firstname(String teacher_firstname) {
-        this.teacher_firstname = teacher_firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getTeacher_lastname() {
-        return teacher_lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setTeacher_lastname(String teacher_lastname) {
-        this.teacher_lastname = teacher_lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getTeacher_contactnumber() {
-        return teacher_contactnumber;
+    public String getContact() {
+        return contact;
     }
 
-    public void setTeacher_contactnumber(String teacher_contactnumber) {
-        this.teacher_contactnumber = teacher_contactnumber;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
-    public String getTeacher_address() {
-        return teacher_address;
+    public String getAddress() {
+        return address;
     }
 
-    public void setTeacher_address(String teacher_address) {
-        this.teacher_address = teacher_address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getTeacher_username() {
-        return teacher_username;
+    public String getUsername() {
+        return username;
     }
 
-    public void setTeacher_username(String teacher_username) {
-        this.teacher_username = teacher_username;
+    public void setUsername(String teacher_username) {
+        this.username = username;
     }
 
-    public String getTeacher_password() {
-        return teacher_password;
+    public String getPassword() {
+        return password;
     }
 
-    public void setTeacher_password(String teacher_password) {
-        this.teacher_password = teacher_password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

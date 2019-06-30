@@ -30,8 +30,6 @@ public class ViewDetailOfTeacherActivity extends AppCompatActivity {
         AttendanceAPI attendanceAPI = Url.getInstance().create(AttendanceAPI.class);
 
         Call<List<Teacher>> listCall = attendanceAPI.getTeacher();
-
-
         listCall.enqueue(new Callback<List<Teacher>>() {
             @Override
             public void onResponse(Call<List<Teacher>> call, Response<List<Teacher>> response) {
@@ -40,6 +38,9 @@ public class ViewDetailOfTeacherActivity extends AppCompatActivity {
                     Toast.makeText(ViewDetailOfTeacherActivity.this, "Code : "+ response.code() , Toast.LENGTH_SHORT).show();
                 }
                 List<Teacher> items =  response.body();
+                for (int i =0; i<items.size(); i++){
+                    Toast.makeText(ViewDetailOfTeacherActivity.this, "" + items.get(i).getAddress(), Toast.LENGTH_SHORT).show();
+                }
                 TeacherAdapter teacherAdapter = new TeacherAdapter(items,ViewDetailOfTeacherActivity.this);
                 recyclerViewListTeacher.setAdapter(teacherAdapter);
                 recyclerViewListTeacher.setLayoutManager(new LinearLayoutManager(ViewDetailOfTeacherActivity.this));
