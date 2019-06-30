@@ -95,6 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
                     etPassword.setError("enter password");
                 }
                 else {
+                    
 
                     student student = new student();
 
