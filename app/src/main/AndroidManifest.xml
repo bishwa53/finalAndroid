@@ -19,8 +19,8 @@
         <activity android:name=".ViewAttendanceActivity" />
         <activity android:name=".AddAttendanceActivity" />
         <activity android:name=".ViewDetailOfTeacherActivity" />
-        <activity android:name=".HolidayActivity" />
-        <activity android:name=".EventActivity" />
+        <activity android:name=".RUDStudentActivity" />
+        <activity android:name=".RUDTeacherActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ViewDetailOfStudent" />
         <activity android:name=".RegisterTeacher" />

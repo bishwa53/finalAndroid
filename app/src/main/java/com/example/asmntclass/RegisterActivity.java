@@ -14,22 +14,22 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import URL.Url;
+import api.AttendanceAPI;
 import model.student;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
 
     Button btnRegisterStudent;
     EditText etFname, etLname, etContact, etAddress, etUsername, etPassword;
-    Spinner spnClass;
-    String year;
-    private String[] yearString = new String[] {"1st","2nd","3rd"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        spnClass = findViewById(R.id.spnClass);
         etFname = findViewById(R.id.etFname);
         etLname = findViewById(R.id.etLname);
         etContact = findViewById(R.id.etContact);
@@ -38,25 +38,6 @@ public class RegisterActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnRegisterStudent = findViewById(R.id.btnRegisterStudent);
 
-        spnClass.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView,
-                                       View view, int i, long l) {
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                year = (String) spnClass.getSelectedItem();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        ArrayAdapter<String> adapter_year = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, yearString);
-        adapter_year
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnClass.setAdapter(adapter_year);
 
         btnRegisterStudent.setOnClickListener(new View.OnClickListener() {
 
@@ -95,23 +76,27 @@ public class RegisterActivity extends AppCompatActivity {
                     etPassword.setError("enter password");
                 }
                 else {
-                    
-
-                    student student = new student();
-
-                    student.setFirstName(first_name);
-                    student.setLastName(last_name);
-                    student.setContactNumber(phone_no);
-                    student.setAddress(address);
-                    student.cla(year);
-                    student.setUsername(userName);
-                    student.setPassword(passWord);
+                    student student = new student(first_name,last_name,phone_no,address,userName,passWord);
+                    AttendanceAPI attendanceAPI = Url.getInstance().create(AttendanceAPI.class);
 
 
-                    Intent intent =new Intent(RegisterActivity.this,Dashboard.class);
-                    startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "student added successfully", Toast.LENGTH_SHORT).show();
+                    Call<Void> voidCall = (Call<Void>) attendanceAPI.addStudent(student);
 
+                    voidCall.enqueue(new Callback<Void>() {
+                        @Override
+                        public void onResponse(Call<Void> call, Response<Void> response) {
+                            if (!response.isSuccessful()){
+                                Toast.makeText(RegisterActivity.this, "Code" + response.code(), Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            Toast.makeText(RegisterActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onFailure(Call<Void> call, Throwable t) {
+
+                        }
+                    });
                 }
             }
         });

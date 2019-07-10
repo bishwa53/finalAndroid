@@ -11,6 +11,15 @@ public class student {
     private String username;
     private String password;
 
+    public student(String firstName, String lastName, String contact, String address, String username, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contactNumber = contact;
+        this.address = address;
+        this.username = username;
+        this.password = password;
+    }
+
     public int getStudent_id() {
         return student_id;
     }

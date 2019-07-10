@@ -93,11 +93,6 @@ public class RegisterTeacher extends AppCompatActivity {
 
                         }
                     });
-
-
-
-
-
                 }
 
             }

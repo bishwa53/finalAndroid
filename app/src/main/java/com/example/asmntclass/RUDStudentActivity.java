@@ -3,11 +3,11 @@ package com.example.asmntclass;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class HolidayActivity extends AppCompatActivity {
+public class RUDStudentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_holiday);
+        setContentView(R.layout.RUDStudent);
     }
 }

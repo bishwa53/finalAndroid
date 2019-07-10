@@ -208,14 +208,14 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/holiday" />
+                        android:src="@drawable/teacherdetails" />
 
                     <Button
-                        android:id="@+id/btnHoliday"
+                        android:id="@+id/btnRUDTeacher"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Holiday"
+                        android:text="RUDTeacher"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -243,11 +243,11 @@
                         android:src="@drawable/event" />
 
                     <Button
-                        android:id="@+id/btnEvent"
+                        android:id="@+id/btnRUDStudent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Event"
+                        android:text="RUDStudent"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
                 </LinearLayout>

@@ -34,7 +34,7 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
                 .inflate(R.layout.teacher_content, viewGroup,false);
         return new TeacherHolder(view);
     }
-
+ 
     @Override
     public void onBindViewHolder(@NonNull TeacherHolder teacherHolder, int i) {
 
