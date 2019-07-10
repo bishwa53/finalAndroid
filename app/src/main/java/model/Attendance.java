@@ -2,27 +2,50 @@ package model;
 
 public class Attendance {
 
-    private int attendance_session_id;
-    private int attendance_student_id;
-    private String attendance_status;
+    private int id;
+    private String status;
+    private String attDate;
+    private int studentId;
 
-    public int getAttendance_session_id() {
-        return attendance_session_id;
+
+    public Attendance() {
+        this.id = id;
+        this.status = status;
+        this.attDate = attDate;
+        this.studentId = studentId;
     }
-    public void setAttendance_session_id(int attendance_session_id) {
-        this.attendance_session_id = attendance_session_id;
+
+    public int getId() {
+        return id;
     }
-    public int getAttendance_student_id() {
-        return attendance_student_id;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    public void setAttendance_student_id(int attendance_student_id) {
-        this.attendance_student_id = attendance_student_id;
+
+    public String getStatus() {
+        return status;
     }
-    public String getAttendance_status() {
-        return attendance_status;
+
+    public void setStatus(String status) {
+        this.status = status;
     }
-    public void setAttendance_status(String attendance_status) {
-        this.attendance_status = attendance_status;
+
+    public String getAttDate() {
+        return attDate;
     }
+
+    public void setAttDate(String attDate) {
+        this.attDate = attDate;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
 
 }

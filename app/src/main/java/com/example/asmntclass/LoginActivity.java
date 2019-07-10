@@ -110,6 +110,17 @@ public class LoginActivity extends Activity  {
                         etPassword.setError("enter password");
                     }
 
+
+                     if(teacher!= null)
+                    {
+                        Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
+                        Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                        Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+
+
+
                 }
 
             }

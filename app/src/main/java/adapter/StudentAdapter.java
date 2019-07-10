@@ -18,7 +18,7 @@ import model.student;
 public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentHolder> {
 
     private List<student> studentList;
-    private Context context;
+    private Context context;;
 
     public StudentAdapter(List<student> studentList, Context context){
         this.studentList= studentList;

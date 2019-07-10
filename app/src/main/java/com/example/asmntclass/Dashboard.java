@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Dashboard extends AppCompatActivity {
-    Button btnAddTeacher, btnAddStudent, btnTeacherDetails, btnStudentDetails,btnRUDTeacher, btnRUDStudent, btnBack;
+    Button btnAddTeacher, btnAddStudent, btnTeacherDetails, btnStudentDetails, btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +17,6 @@ public class Dashboard extends AppCompatActivity {
         btnAddStudent = findViewById(R.id.btnAddStudent);
         btnTeacherDetails = findViewById(R.id.btnTeacherDetails);
         btnStudentDetails = findViewById(R.id.btnStudentDetails);
-        btnRUDTeacher = findViewById(R.id.btnRUDTeacher);
-        btnRUDStudent = findViewById(R.id.btnRUDStudent);
         btnBack = findViewById(R.id.btnBack);
 
 
@@ -66,27 +64,6 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-        btnRUDTeacher.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                Intent intent =new Intent(Dashboard.this, RUDStudentActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btnRUDStudent.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                Intent intent =new Intent(Dashboard.this, RUDTeacherActivity.class);
-                startActivity(intent);
-            }
-        });
         btnBack.setOnClickListener(new View.OnClickListener() {
 
             @Override

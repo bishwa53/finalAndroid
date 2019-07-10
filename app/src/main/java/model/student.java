@@ -1,23 +1,24 @@
 package model;
 
 public class student {
-
     private int student_id;
+    private String username;
+    private String password;
     private String firstName;
     private String lastName;
     private String classes;
     private String contactNumber;
     private String address;
-    private String username;
-    private String password;
+
 
     public student(String firstName, String lastName, String contact, String address, String username, String password) {
+        this.username = username;
+        this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.contactNumber = contact;
         this.address = address;
-        this.username = username;
-        this.password = password;
+
     }
 
     public int getStudent_id() {
