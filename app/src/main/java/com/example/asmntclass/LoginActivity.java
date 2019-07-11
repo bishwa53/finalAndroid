@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import android.widget.AdapterView;
@@ -16,7 +17,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import URL.Url;
+import api.UsersAPI;
+import bodies.ResBody;
 import model.Teacher;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class LoginActivity extends Activity  {
@@ -27,8 +34,6 @@ public class LoginActivity extends Activity  {
 
     private String[] userRoleString = new String[] { "admin", "student", "teacher"};
 
-    TextView tvCount;
-    int counter = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,15 +112,40 @@ public class LoginActivity extends Activity  {
                     {
                         etPassword.setError("enter password");
                     }
+                    if(etUsername.getText().length()>0 && etPassword.getText().length()>0){
 
+                        UsersAPI usersAPI = Url.getInstance().create(UsersAPI.class);
+                        Call<ResBody> loginCall = usersAPI.login(spinnerloginas.getSelectedItem().toString().toLowerCase(),etUsername.getText().toString(),etPassword.getText().toString());
 
-//                     if(teacher!= null)
-//                    {
-//                        Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
-//                        Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
-//                    }
-//                    else
-//                        Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+                        loginCall.enqueue(new Callback<ResBody>() {
+                            @Override
+                            public void onResponse(Call<ResBody> call, Response<ResBody> response) {
+                                ResBody resBody = response.body();
+
+                                if (resBody.getStatus().equals("success")){
+
+                                    if ( spinnerloginas.getSelectedItem().toString().equals("student") ){
+                                        Intent in = new Intent(LoginActivity.this,StudentActivity.class);
+                                        startActivity(in);
+                                    }
+
+                                    Intent in = new Intent(LoginActivity.this,TeacherActivity.class);
+                                    startActivity(in);
+                                }
+
+                                Log.d("Login response",resBody.getStatus());
+                                Log.d("Login response",resBody.getMessage());
+
+                            }
+
+                            @Override
+                            public void onFailure(Call<ResBody> call, Throwable t) {
+
+                            }
+                        });
+
+                    }
+
 
 
 

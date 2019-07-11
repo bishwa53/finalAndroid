@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 import model.student;
 
-public class AddStudentActivity extends AppCompatActivity {
+public class StudentActivity extends AppCompatActivity {
 
 
     }

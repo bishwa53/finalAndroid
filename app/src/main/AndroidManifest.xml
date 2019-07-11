@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".TeacherActivity"></activity>
-        <activity android:name=".AddStudentActivity" />
+        <activity android:name=".StudentActivity" />
         <activity android:name=".ViewAttendanceActivity" />
         <activity android:name=".AddAttendanceActivity" />
         <activity android:name=".ViewDetailOfTeacherActivity" />

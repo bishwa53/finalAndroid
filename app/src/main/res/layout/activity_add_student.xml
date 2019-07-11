@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/download"
-    tools:context=".AddStudentActivity">
+    tools:context=".StudentActivity">
 
     <ListView
         android:id="@+id/listview"

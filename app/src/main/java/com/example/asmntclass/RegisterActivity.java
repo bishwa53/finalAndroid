@@ -2,6 +2,8 @@ package com.example.asmntclass;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -83,12 +85,14 @@ public class RegisterActivity extends AppCompatActivity {
                     Call<Void> voidCall = (Call<Void>) attendanceAPI.addStudent(student);
 
                     voidCall.enqueue(new Callback<Void>() {
+                        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                         @Override
                         public void onResponse(Call<Void> call, Response<Void> response) {
                             if (!response.isSuccessful()){
                                 Toast.makeText(RegisterActivity.this, "Code" + response.code(), Toast.LENGTH_SHORT).show();
                                 return;
                             }
+                            All.showNotification(getApplicationContext(),"Student Notificaiton","Student added");
                             Toast.makeText(RegisterActivity.this, "Added", Toast.LENGTH_SHORT).show();
                         }
 
