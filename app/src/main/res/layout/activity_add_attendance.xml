@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="@drawable/download"
     tools:context=".AddAttendanceActivity">
 
     <android.support.v7.widget.RecyclerView

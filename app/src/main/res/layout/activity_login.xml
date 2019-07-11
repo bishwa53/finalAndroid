@@ -4,6 +4,7 @@
     android:layout_height = "match_parent" android:paddingLeft= "20dp"
     android:paddingRight = "20dp"
     android:paddingTop = "20dp"
+    android:layout_gravity="center"
     android:background="@drawable/download"
     android:paddingBottom = "20dp" tools:context = ".MainActivity">
 
@@ -72,40 +73,11 @@
                 android:textColorHint="#ffff299f"
                 android:textSize="30dp" />
 
-            <TextView
-                android:id="@+id/tvLeft"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/etPassword"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:text="Attempts Left:"
-                android:textSize="25dp" />
-
-            <TextView
-                android:id="@+id/tvCount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/tvLeft"
-                android:layout_alignBottom="@+id/tvLeft"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginEnd="19dp"
-                android:layout_marginRight="19dp"
-                android:layout_marginBottom="6dp"
-                android:layout_toEndOf="@+id/textview"
-                android:layout_toRightOf="@+id/textview"
-                android:textSize="25dp" />
-
-
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvLeft"
+                android:layout_below="@+id/etPassword"
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@+id/textview"
                 android:layout_toLeftOf="@+id/textview"
@@ -113,7 +85,7 @@
 
             <Button
                 android:id="@+id/btnCancel"
-                android:layout_below="@+id/tvCount"
+                android:layout_below="@+id/etPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

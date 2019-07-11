@@ -39,9 +39,7 @@ public class LoginActivity extends Activity  {
         btnCancel = (Button)findViewById(R.id.btnCancel);
         etUsername = (EditText)findViewById(R.id.etUsername);
         etPassword = (EditText)findViewById(R.id.etPassword);
-        tvCount = (TextView)findViewById(R.id.tvCount);
         spinnerloginas=(Spinner)findViewById(R.id.spinnerloginas);
-        tvCount.setVisibility(View.GONE);
 
         spinnerloginas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -111,13 +109,13 @@ public class LoginActivity extends Activity  {
                     }
 
 
-                     if(teacher!= null)
-                    {
-                        Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
-                        Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
-                    }
-                    else
-                        Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+//                     if(teacher!= null)
+//                    {
+//                        Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
+//                        Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
+//                    }
+//                    else
+//                        Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
 
 
 
@@ -125,14 +123,6 @@ public class LoginActivity extends Activity  {
 
             }
         });
-
-        tvCount.setVisibility(View.VISIBLE);
-        counter--;
-        tvCount.setText(Integer.toString(counter));
-
-        if (counter == 0) {
-            btnLogin.setEnabled(false);
-        }
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
