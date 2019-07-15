@@ -125,12 +125,14 @@ public class LoginActivity extends Activity  {
                                 if (resBody.getStatus().equals("success")){
 
                                     if ( spinnerloginas.getSelectedItem().toString().equals("student") ){
-                                        Intent in = new Intent(LoginActivity.this,StudentActivity.class);
+                                        Intent in = new Intent(LoginActivity.this,ViewAttendanceActivity.class);
+                                        startActivity(in);
+                                    }else{
+                                        Intent in = new Intent(LoginActivity.this,TeacherActivity.class);
                                         startActivity(in);
                                     }
 
-                                    Intent in = new Intent(LoginActivity.this,TeacherActivity.class);
-                                    startActivity(in);
+
                                 }
 
                                 Log.d("Login response",resBody.getStatus());
